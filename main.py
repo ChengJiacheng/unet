@@ -1,4 +1,4 @@
-﻿import nn.classifier
+import nn.classifier
 import nn.unet as unet
 #import helpers
 
@@ -13,7 +13,6 @@ import os
 from multiprocessing import cpu_count
 
 from data.dataset import TrainImageDataset, TestImageDataset
-import img.transformer as transformer
 
 from torch.autograd import Variable
 
@@ -71,14 +70,14 @@ if __name__ == "__main__":
 
     print("Training on {} samples and validating on {} samples "
           .format(len(train_loader.dataset), len(valid_loader.dataset)))
-    
-    for ind, (inputs, target) in enumerate(train_loader):
-        if ind == 0:
-            print(inputs)
-            inputs, target = Variable(inputs), Variable(target)
-            outputs = net(inputs)
-            break
-    1/0
+#    
+#    for ind, (inputs, target) in enumerate(train_loader):
+#        if ind == 0:
+#            print(inputs)
+#            inputs, target = Variable(inputs), Variable(target)
+#            outputs = net(inputs)
+#            break
+#    1/0
 
     classifier.train(train_loader, valid_loader, epochs)
 #
