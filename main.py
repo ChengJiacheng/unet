@@ -38,7 +38,7 @@ if __name__ == "__main__":
 #    threads = 0
     use_cuda = torch.cuda.is_available()
 #    print(os.path.abspath(__file__))
-    script_dir = os.path.dirname(os.path.abspath(__file__)) # os.path.abspath(__file__) 返回的是当前py文件的路径，不能找ipython命令行中运行
+#    script_dir = os.path.dirname(os.path.abspath(__file__)) # os.path.abspath(__file__) 返回的是当前py文件的路径，不能找ipython命令行中运行
 
     # Download the datasets
     ds_fetcher = DatasetFetcher()

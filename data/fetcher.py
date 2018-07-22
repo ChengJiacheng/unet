@@ -33,7 +33,9 @@ class DatasetFetcher:
         competition_name = "carvana-image-masking-challenge"
 
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        destination_path = os.path.join(script_dir, '../../input/')
+#        print(script_dir)
+#        1/0
+        destination_path = os.path.join(script_dir, '../../input/')#.\..\表示项目文件所在目录向上二级目录之下的目录。
         prefix = ""
         if hq_files:
             prefix = "_hq"
